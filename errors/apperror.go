@@ -31,8 +31,9 @@ func New(code int, message string, err error) *AppError {
 
 //* init common custom error
 var (
-	ErrBadRequest      = New(http.StatusBadRequest, "Bad Request", nil)
-    ErrUnauthorized    = New(http.StatusUnauthorized, "Unauthorized", nil)
-    ErrNotFound        = New(http.StatusNotFound, "Resource not found", nil)
-    ErrInternalServer  = New(http.StatusInternalServerError, "Internal Server Error", nil)
+	ErrBadRequest      	= New(http.StatusBadRequest, "Bad Request", nil)
+    ErrUnauthorized    	= New(http.StatusUnauthorized, "Unauthorized", nil)
+    ErrNotFound        	= New(http.StatusNotFound, "Resource not found", nil)
+    ErrInternalServer  	= New(http.StatusInternalServerError, "Internal Server Error", nil)
+	ErrCreated 			= New(http.StatusCreated, "Create Successfully", nil)
 )
