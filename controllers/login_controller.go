@@ -23,7 +23,7 @@ func LoginUser(c *gin.Context) {
 	tokenString, err := services.LoginUser(loginUser)
 	if err != nil {
 		c.JSON(errors.ErrInternalServer.Code, gin.H{
-			"error": err,
+			"error": err.Error(),
 		})
 		return
 	}
